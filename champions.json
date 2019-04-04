@@ -34,7 +34,7 @@
   },
   {
     "championName": "Akali",
-    "Key": 83,
+    "Key": 84,
     "imageUrl": "https://ddragon.leagueoflegends.com/cdn/9.5.1/img/champion/Akali.png",
     "roles": "Top, Middle",
     "skinsUrls": [
@@ -940,7 +940,7 @@
   {
     "championName": "LeBlanc",
     "Key": 7,
-    "imageUrl": "https://ddragon.leagueoflegends.com/cdn/9.5.1/img/champion/LeBlanc.png",
+    "imageUrl": "https://ddragon.leagueoflegends.com/cdn/9.6.1/img/champion/Leblanc.png",
     "roles": "Middle",
     "skinsUrls": [
       "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeBlanc_0.jpg",

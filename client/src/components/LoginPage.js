@@ -20,6 +20,7 @@ class LoginPage extends Component {
             logoutSuccess={this.props.logoutSuccess}
           />
         </div>
+        <div class="slideshow-container" />
       </>
     );
   }
