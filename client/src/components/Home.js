@@ -9,7 +9,7 @@ class Home extends Component {
           class="welcome-title"
           style={{ background: "#fff", padding: 24, minHeight: 80 }}
         >
-          Welcome to LOL.gg
+          Welcome to Lol.gg
           <p />
           <Search />
         </div>
