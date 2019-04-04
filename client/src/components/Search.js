@@ -5,6 +5,7 @@ import "./Search.css";
 import "antd/dist/antd.css";
 import Moment from "react-moment";
 import Chart from "react-google-charts";
+import { stat } from "fs";
 
 const InputSearch = Input.Search;
 const { Title } = Typography;
@@ -17,6 +18,15 @@ const columns = [
     title: "",
     dataIndex: "championURL",
     render: championURL => <img src={championURL} className="champion-Url" />
+  },
+  {
+    title: "Statistics",
+    dataIndex: "stats",
+    render: stats => (
+      <div>
+        <span>{`${stats.kills}/${stats.deaths}/${stats.assists}`}</span>
+      </div>
+    )
   },
   {
     title: "Win or Loss",
@@ -37,7 +47,8 @@ class Search extends Component {
       results: [],
       summonerName: "",
       summonerLevel: "",
-      profileIconUrl: ""
+      profileIconUrl: "",
+      stats: ""
     };
   }
 
@@ -49,6 +60,7 @@ class Search extends Component {
       let profileIconUrl;
       let championName;
       let championURL;
+      let stats;
       let winCount = response.data.filter(match => {
         return match.result === "Win";
       }).length;
@@ -76,6 +88,9 @@ class Search extends Component {
       if (response.data[0].championURL) {
         championURL = response.data[0].championURL;
       }
+      if (response.data[0].stats) {
+        stats = response.data[0].stats;
+      }
 
       this.setState({
         results: response.data,
@@ -85,7 +100,8 @@ class Search extends Component {
         championName: championName,
         championURL: championURL,
         winCount: winCount,
-        lossCount: lossCount
+        lossCount: lossCount,
+        stats: stats
       });
       console.log(this.state.results);
     });

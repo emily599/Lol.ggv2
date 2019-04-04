@@ -11,7 +11,8 @@ const lolSchema = new Schema({
   dataPlate: { type: Date, required: true },
   summonerLevel: { type: String },
   profileIconUrl: { data: Buffer, contentType: String },
-  championURL: { data: Buffer, contentType: String }
+  championURL: { data: Buffer, contentType: String },
+  stats: { type: Object }
 });
 
 const Lol = mongoose.model("Lol", lolSchema);
