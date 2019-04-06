@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 const db = require("../models");
 const fetch = require("node-fetch");
-const api = "RGAPI-cc926fca-ceb3-415d-90fa-d8f871f112a5";
+const api = process.env.RIOT_API_KEY;
 const champions = require("../champions.json");
 
 Object.defineProperty(Array.prototype, "flat", {
