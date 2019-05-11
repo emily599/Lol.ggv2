@@ -151,6 +151,7 @@ module.exports = {
       })
       .then(response => response.json())
       .then(json => {
+        console.log(json);
         const matches = json.matches.slice(0, 10);
         return Promise.all(
           matches.map(match => getOneMatch(match, res.locals.accountInfo))
